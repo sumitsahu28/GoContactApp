@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ContactApp</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+<body class="container">
+    <h3>Contact App</h3>
+    <div class="col-md-12">
+        <div class="col-md-6">
+                <h4>Welcome {{.}}</h4>
+        </div>
+        <div class="col-md-6">
+                <a href="/logout">Logout</a>
+        </div>
+    </div>
+    <div>
+        <h4>Add a contact</h4>
+        <form method="POST" action="/contacts" class="row" style="margin-left: 5px">
+            <input placeholder="Name" name="name">
+            <input placeholder="Mobile No" name="mobile">
+            <input placeholder="Address" name="address">
+            <button type="submit">Add</button>
+        </form>
+    </div>
+    <table style="width: 100%">
+            <caption>Contact List</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Mobile No</th>
+                <th>Address</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="allContacts">
+
+        </tbody>
+    </table>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+    <script src="/static/js/index.js"></script>
+</body>
+</html>
